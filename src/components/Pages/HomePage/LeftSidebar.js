@@ -6,7 +6,7 @@ import { leftStyle1 } from './HomeStyle';
 
 const LeftSidebar = () => {
     return (
-        <div className='w-[25%]'>
+        <div className='w-[25%] sticky top-20 overflow-y-auto h-[800px]'>
             <div className={leftStyle1}>
                 <img className='w-10 h-10 rounded-full' src="/images/5.jpg" alt="" />
                 <span>Sujon chambugong</span>
