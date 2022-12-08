@@ -3,10 +3,9 @@ import { FaPaste } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { leftStyle1 } from './HomeStyle';
 
-
-const LeftSidebar = () => {
+const RightSidebar = () => {
     return (
-        <div className='w-[25%] sticky top-20 overflow-hidden overflow-y-auto h-screen'>
+        <div className='w-[25%] sticky mt-[20px] top-20 overflow-y-auto h-screen'>
             <div className={leftStyle1}>
                 <img className='w-10 h-10 rounded-full' src="/images/5.jpg" alt="" />
                 <span>Sujon chambugong</span>
@@ -94,4 +93,4 @@ const LeftSidebar = () => {
     );
 };
 
-export default LeftSidebar;
+export default RightSidebar;

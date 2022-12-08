@@ -3,6 +3,7 @@ import CreateStory from './HomePage/CreateStory';
 import LeftSidebar from './HomePage/LeftSidebar';
 import MyPost from './HomePage/MyPost';
 import MyStatus from './HomePage/MyStatus';
+import RightSidebar from './HomePage/RightSidebar';
 
 const Home = () => {
     return (
@@ -15,10 +16,7 @@ const Home = () => {
                     <MyPost />
                 </div>
             </div>
-            <div className='w-[25%] flex justify-evenly items-center'>
-                <img className='w-16 h-16 rounded-full' src="/images/5.jpg" alt="" />
-                <span>Sujon chambugong</span>
-            </div>
+            <RightSidebar />
         </div>
     );
 };
