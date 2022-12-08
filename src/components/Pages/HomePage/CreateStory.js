@@ -3,7 +3,7 @@ import { FaPlusCircle } from "react-icons/fa";
 
 const CreateStory = () => {
     return (
-        <div>
+        <div className='bg-white border-2 py-3 my-5 rounded-lg'>
             <div className='flex justify-start gap-2'>
                 <div className='border-2 px-2 py-2 rounded-lg'>
                     <img className='w-36 h-44 rounded-lg' src="/images/5.jpg" alt="" />

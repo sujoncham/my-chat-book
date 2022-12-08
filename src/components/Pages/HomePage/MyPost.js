@@ -15,8 +15,8 @@ const PostCreate = () => {
                         </div>
                     </div>
                 </div>
-                <div className=' pt-5'>
-                    <img className='w-[100%]' src="/images/3.jpg" alt="" />
+                <div className=' pt-5 h-[450px]'>
+                    <img className='w-[100%] h-[100%]' src="/images/3.jpg" alt="" />
                 </div>
                 <div className='flex justify-between items-center px-3 py-2 border-b-2 border-gray-700'>
                     <div className='flex justify-start items-center gap-2'>
@@ -54,8 +54,8 @@ const PostCreate = () => {
                         </div>
                     </div>
                 </div>
-                <div className=' pt-5'>
-                    <img className='w-[100%]' src="/images/3.jpg" alt="" />
+                <div className=' pt-5 h-[450px]'>
+                    <img className='w-[100%] h-[100%]' src="/images/3.jpg" alt="" />
                 </div>
                 <div className='flex justify-between items-center px-3 py-2 border-b-2 border-gray-700'>
                     <div className='flex justify-start items-center gap-2'>

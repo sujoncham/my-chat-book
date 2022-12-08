@@ -3,11 +3,11 @@ import { FaLaugh, FaPaste, FaVideo } from "react-icons/fa";
 
 const MyStatus = () => {
     return (
-        <div className='bg-gray-500 px-3 py-3 mt-5 rounded-lg'>
+        <div className='bg-white px-3 py-3 mt-5 rounded-lg'>
             <div className='flex justify-between items-center gap-3 border-b-2 pb-5 border-gray-700'>
-                <img className='w-16 h-16 rounded-full' src="/images/5.jpg" alt="" />
+                <img className='w-14 h-14 rounded-full' src="/images/5.jpg" alt="" />
                 <div className='w-full'>
-                    <input type="text" placeholder="What's your mind, Sujon?" className='px-2 py-2 w-full rounded-full' />
+                    <input type="text" placeholder="What's your mind, Sujon?" className='px-2 py-2 w-full border-2 rounded-full' />
                 </div>
             </div>
             <div className='flex justify-between items-center py-3'>

@@ -1,0 +1,1 @@
+export const leftStyle1 = "flex justify-start items-center gap-3 px-3 py-2 rounded-lg mt-1 bg-gray-500 hover:bg-gray-600";
