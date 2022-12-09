@@ -7,10 +7,10 @@ import RightSidebar from './HomePage/RightSidebar';
 
 const Home = () => {
     return (
-        <div className='bg-purple-300 px-3 py-4 flex justify-between items-start gap-10'>
+        <div className='bg-purple-100 px-2 flex justify-between items-start gap-10'>
             <LeftSidebar />
-            <div className='w-[50%] px-10'>
-                <div className='bg-gray-500 px-5 py-2 rounded-lg'>
+            <div className='w-[60%] px-10'>
+                <div className='bg-purple-200 px-5 rounded-lg'>
                     <CreateStory />
                     <MyStatus />
                     <MyPost />
