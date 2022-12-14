@@ -1,7 +1,62 @@
-import React from 'react';
-import { FaGlobeAsia, FaLaugh, FaPaste } from "react-icons/fa";
+import axios from 'axios';
+import React, { useState } from 'react';
+import { FaGlobeAsia } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
-const CreatePost = ({setOpen}) => {
+const CreatePost = ({setOpen, open}) => {
+    const [image, setImage] = useState("");
+    const [userText, setUserText] = useState("");
+    const [category, setCategory] = useState("");
+
+    // const timePost = new Date().toLocaleTimeString();
+    // const datePost = new Date().toLocaleDateString();
+
+	const changeHandler = (event) => {
+        // console.log(event.target.files)
+		setImage(event.target.files[0]);
+        setOpen(true);
+	};
+
+    const handlerText = (event) =>{
+        // console.log(event.target.value)
+		setUserText(event.target.value);
+    }
+    const handleCategory = (event) =>{
+        // console.log(event.target.value)
+		setCategory(event.target.value);
+    }
+
+	const handleSubmission = (event) => {
+        event.preventDefault();
+        const formData = new FormData();
+		formData.append('image', image);
+		formData.append('userText', userText);
+		formData.append('category', category);
+      
+        if(image=== '' || userText === '' || category===''){
+            console.log('must not be  empty');
+            
+            setOpen(false);
+            return;
+        }
+        const url = "http://localhost:5000/chatPost";
+
+		axios.post(url, formData, {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            }})
+			.then((res) => {
+                console.log(res)
+                if(res){
+                    toast("Inserted Successfully");
+                }
+			})
+
+            setOpen(false)
+	};
+	
+  
+    
     return (
         <div className="fixed z-10 overflow-y-auto top-0 w-full left-0" id="modal">
             <div className="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
@@ -27,27 +82,36 @@ const CreatePost = ({setOpen}) => {
                                     </div>
                                 </div>
                             </div>
-                            
+                        </div>
+                        <div>
+                            <img className={"w-[100%] h-56" + (image === "" ? "hidden" : "block" )} src={image === "" ? "" : URL.createObjectURL(image)} alt="" />
+                        </div>
+                        <form onSubmit={handleSubmission } className='flex flex-col py-3 border-gray-700' method="post" encType="multipart/form-data">
                             <div className='w-full pb-10'>
-                                <textarea type="text" placeholder="What's your mind, Sujon?" className='px-2 py-2 w-full border-2 rounded-lg'></textarea>
+                                <textarea type="text" name='userText' onChange={handlerText} placeholder="What's your mind, Sujon?" className='px-2 py-2 w-full border-2 rounded-lg'></textarea>
                             </div>
-                        </div>
-                        <div className='flex justify-between items-center py-3 border-b-2 border-gray-700'>
+                            <select onChange={handleCategory} name="category" className='border border-purple-500 py-2 mb-5 rounded w-full'>
+                                <option>select one</option>
+                                <option value='nature'>nature</option>
+                                <option value='hills'>hills</option>
+                                <option value='personal'>personal</option>
+                                <option value='group'>group</option>
+                                <option value='food'>Food</option>
+                                <option value='family'>family</option>
+                            </select>
                             
-                            <div className='flex justify-start items-center gap-2 hover:bg-gray-400 px-2 py-2 rounded-lg cursor-pointer'>
-                                <span className='text-purple-700 rounded-full'><FaPaste size={20} /></span>
-                                <span>Photo/Video</span>
+                            <div className='py-2 rounded-lg'>
+                                <input type="file" name='image'  onChange={changeHandler} />
+                                {/* <input 
+                                    className="form-control-file mb-3" 
+                                    type="file" name="photo"
+                                    onChange={changeHandler}
+                                    /> */}
                             </div>
-                            <div className='flex justify-start items-center gap-2 hover:bg-gray-400 px-2 py-2 rounded-lg cursor-pointer'>
-                                <span className='text-purple-700 rounded-full'><FaLaugh size={20} /></span>
-                                <span>Felling/Activity</span>
+                            <div className='pt-10'>
+                                <button type='submit' className='bg-purple-500 hover:bg-purple-600 w-full px-2 py-2 rounded-lg'>Add Post</button>
                             </div>
-                        </div>
-
-                        <div className='pt-10'>
-                            <button type='submit' className='bg-purple-500 px-2 py-2 rounded-lg'>Add Post</button>
-                        </div>
-                        
+                        </form>
                     </div>
                     
                 </div>

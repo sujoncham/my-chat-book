@@ -22,7 +22,7 @@ const MyStatus = () => {
                     <span>Felling/Activity</span>
                 </div>
             </div>
-            {open && <CreatePost setOpen={setOpen} />}
+            {open && <CreatePost open={open} setOpen={setOpen} />}
         </div>
     );
 };

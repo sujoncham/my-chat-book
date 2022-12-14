@@ -1,42 +1,62 @@
 [
   {
-    "id": 1,
-    "post": "I want to create a sticky side bar, which should not be scrollable with main content. just like tailwind css main page or laracasts discussion page where right side channels does not move in y direction but thread container moves.",
-    "fileData": "/images/3.jpg",
+    "chatPost": "I want to create a sticky side bar, which should not be scrollable with main content. just like tailwind css main page or laracasts discussion page where right side channels does not move in y direction but thread container moves.",
+    "chatPostImg": "/images/post1.jpg",
     "category": ["public", "friends", "only me"],
     "username": "md Selim Khan",
     "like": "2",
     "comments": "1",
-    "share": "3"
+    "share": "3",
+    "status": "active"
   },
   {
-    "id": 2,
-    "post": "I want to create a sticky side bar, which should not be scrollable with main content. just like tailwind css main page or laracasts discussion page where right side channels does not move in y direction but thread container moves.",
-    "fileData": "/images/3.jpg",
+    "chatPost": "I want to create a sticky side bar, which should not be scrollable with main content. just like tailwind css main page or laracasts discussion page where right side channels does not move in y direction but thread container moves.",
+    "chatPostImg": "/images/post2.jpg",
     "category": ["public", "friends", "only me"],
     "username": "Shohel khan",
     "like": "8",
     "comments": "5",
-    "share": "1"
+    "share": "1",
+    "status": "active"
   },
   {
-    "id": 3,
-    "post": "I want to create a sticky side bar, which should not be scrollable with main content. just like tailwind css main page or laracasts discussion page where right side channels does not move in y direction but thread container moves.",
-    "fileData": "/images/3.jpg",
+    "chatPost": "I want to create a sticky side bar, which should not be scrollable with main content. just like tailwind css main page or laracasts discussion page where right side channels does not move in y direction but thread container moves.",
+    "chatPostImg": "/images/post3.jpg",
     "category": ["public", "friends", "only me"],
     "username": "Selina Khan",
     "like": "8",
     "comments": "5",
-    "share": "1"
+    "share": "1",
+    "status": "active"
   },
   {
-    "id": 4,
-    "post": "I want to create a sticky side bar, which should not be scrollable with main content. just like tailwind css main page or laracasts discussion page where right side channels does not move in y direction but thread container moves.",
-    "fileData": "/images/3.jpg",
+    "chatPost": "I want to create a sticky side bar, which should not be scrollable with main content. just like tailwind css main page or laracasts discussion page where right side channels does not move in y direction but thread container moves.",
+    "chatPostImg": "/images/post4.jpg",
     "category": ["public", "friends", "only me"],
     "username": "Korimon Bibi",
     "like": "8",
     "comments": "5",
-    "share": "1"
+    "share": "1",
+    "status": "active"
+  },
+  {
+    "chatPost": "I want to create a sticky side bar, which should not be scrollable with main content. just like tailwind css main page or laracasts discussion page where right side channels does not move in y direction but thread container moves.",
+    "chatPostImg": "/images/post5.jpg",
+    "category": ["public", "friends", "only me"],
+    "username": "Korimon Bibi",
+    "like": "8",
+    "comments": "5",
+    "share": "1",
+    "status": "active"
+  },
+  {
+    "chatPost": "I want to create a sticky side bar, which should not be scrollable with main content. just like tailwind css main page or laracasts discussion page where right side channels does not move in y direction but thread container moves.",
+    "chatPostImg": "/images/post6.jpg",
+    "category": ["public", "friends", "only me"],
+    "username": "Korimon Bibi",
+    "like": "8",
+    "comments": "5",
+    "share": "1",
+    "status": "active"
   }
 ]
